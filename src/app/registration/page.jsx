@@ -17,7 +17,7 @@ export default function Home() {
     city: ""
   })
 
-  const API_URL = "http://unireg-1.onrender.com"
+  const API_URL = "https://unireg-1.onrender.com"
 
   const courseData = {
     Engineering: {
