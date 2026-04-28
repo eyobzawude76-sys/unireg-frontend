@@ -21,11 +21,11 @@ export default function Home() {
 
           {/* Feedback Form */}
           <div className="bg-white p-8 rounded-xl shadow-sm border">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">Feedback Nuu Ergaa</h3>
-            <p className="text-sm text-gray-500 mb-4">Yaada ykn gaaffii qabdan asitti nuu barreessaa.</p>
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Send us your feedback</h3>
+            <p className="text-sm text-gray-500 mb-4">Share your ideas or questions here</p>
             <textarea
               className="w-full p-4 border border-gray-300 rounded-lg outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all h-32"
-              placeholder="Message kee barreessi..."
+              placeholder="Enter your message..."
             ></textarea>
             <button className="mt-4 w-full bg-orange-600 text-white font-bold py-3 rounded-lg hover:bg-orange-700 shadow-md active:scale-95 transition-all">
               Submit Feedback

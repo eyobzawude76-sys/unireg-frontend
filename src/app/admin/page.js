@@ -20,7 +20,7 @@ export default function AdminDashboard() {
 
   const fetchStudents = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/students");
+      const res = await fetch("https://unireg-1.onrender.com/students");
       const data = await res.json();
       setStudents(data);
       setLoading(false);
@@ -32,7 +32,7 @@ export default function AdminDashboard() {
 
   const handleStatusUpdate = async (id, newStatus, message = "") => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/update-student/${id}`, {
+      const response = await fetch(`https://unireg-1.onrender.com/update-student/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus, adminMessage: message }),
@@ -173,9 +173,9 @@ export default function AdminDashboard() {
                 </td>
                 <td className="px-6 py-4 text-center">
                   <div className="flex justify-center gap-1">
-                    <button onClick={() => window.open(`http://127.0.0.1:8000/${s.documents.id_card.replace(/\\/g,'/')}`, "_blank")} className="bg-gray-100 hover:bg-blue-600 hover:text-white px-2 py-1 rounded text-[9px] font-bold border border-gray-200 transition-all">ID</button>
-                    <button onClick={() => window.open(`http://127.0.0.1:8000/${s.documents.receipt.replace(/\\/g,'/')}`, "_blank")} className="bg-gray-100 hover:bg-green-600 hover:text-white px-2 py-1 rounded text-[9px] font-bold border border-gray-200 transition-all">REC</button>
-                    <button onClick={() => window.open(`http://127.0.0.1:8000/${s.documents.result.replace(/\\/g,'/')}`, "_blank")} className="bg-gray-100 hover:bg-orange-600 hover:text-white px-2 py-1 rounded text-[9px] font-bold border border-gray-200 transition-all">RES</button>
+                    <button onClick={() => window.open(`https://unireg-1.onrender.com/${s.documents.id_card.replace(/\\/g,'/')}`, "_blank")} className="bg-gray-100 hover:bg-blue-600 hover:text-white px-2 py-1 rounded text-[9px] font-bold border border-gray-200 transition-all">ID</button>
+                    <button onClick={() => window.open(`https://unireg-1.onrender.com/${s.documents.receipt.replace(/\\/g,'/')}`, "_blank")} className="bg-gray-100 hover:bg-green-600 hover:text-white px-2 py-1 rounded text-[9px] font-bold border border-gray-200 transition-all">REC</button>
+                    <button onClick={() => window.open(`https://unireg-1.onrender.com/${s.documents.result.replace(/\\/g,'/')}`, "_blank")} className="bg-gray-100 hover:bg-orange-600 hover:text-white px-2 py-1 rounded text-[9px] font-bold border border-gray-200 transition-all">RES</button>
                   </div>
                 </td>
                 <td className="px-6 py-4 bg-gray-50 border-l">
